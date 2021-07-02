@@ -1,0 +1,181 @@
+@import url("https://use.typekit.net/jmk3xov.css");
+
+html {
+  overflow: scroll;
+  overflow-x: hidden;
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+}
+::-webkit-scrollbar {
+  width: 0; /* Remove scrollbar space */
+  background: transparent; /* Optional: just make scrollbar invisible */
+  display: none;
+}
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+  background: #ff0000;
+}
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+:root {
+  --dark-bg: rgba(15, 15, 15, 0.95);
+  --spacing: 350px;
+  font-family: brandon-grotesque, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+main {
+  color: white;
+  z-index: 99;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0px auto;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  overflow-y: scroll;
+}
+
+h1,
+h2,
+h3,
+blockquote {
+  font-family: elevon, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  overflow-wrap: break-word;
+}
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+header {
+  background: var(--dark-bg);
+  grid-column: 2 / span 5;
+  font-size: 2rem;
+  padding: 2rem;
+  margin: 0px 0px;
+}
+
+section {
+  grid-column: 2 / 8;
+  padding: 1rem;
+  background: var(--dark-bg);
+  font-size: 1.25rem;
+  line-height: 1.5;
+  margin-bottom: var(--spacing);
+}
+
+blockquote {
+  margin: 0;
+  padding: 0;
+  grid-column: 2 / span 9;
+  margin-bottom: var(--spacing);
+}
+
+blockquote p {
+  color: black;
+  background-color: white;
+  font-size: 4rem;
+  display: inline;
+  line-height: 1;
+}
+
+contact {
+  grid-column: 2 / span 10;
+  padding: 1rem;
+  background: var(--dark-bg);
+  font-size: 1.25rem;
+  line-height: 1.5;
+  margin-bottom: var(--spacing);
+}
+
+links {
+  font-size: 1.25rem;
+  line-height: 1.5;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 0px 10%;
+}
+
+i {
+  color: white;
+  margin: 10px;
+}
+
+buttondiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.button-class {
+  background: black;
+  color: #fff;
+  border: none;
+  position: relative;
+  height: 60px;
+  font-size: 1.6em;
+  padding: 0 1em;
+  cursor: pointer;
+  transition: 800ms ease all;
+  text-decoration: none;
+  outline: none;
+  padding-top: 0.3rem;
+}
+.button-class:hover {
+  background: #fff;
+  color: black;
+}
+.button-class:before,
+.button-class:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 2px;
+  width: 0;
+  background: black;
+  transition: 400ms ease all;
+}
+.button-class:after {
+  right: inherit;
+  top: inherit;
+  left: 0;
+  bottom: 0;
+}
+.button-class:hover:before,
+.button-class:hover:after {
+  width: 100%;
+  transition: 800ms ease all;
+}
+
+.left {
+  grid-column: 6 / 12;
+}
+
+@media screen and (max-width: 1279px) {
+  header {
+    grid-column: 2 / span 10;
+    font-size: 1.7rem;
+  }
+
+  section {
+    grid-column: 2 / span 10;
+  }
+
+  .left {
+    grid-column: 2 / span 10;
+  }
+}
