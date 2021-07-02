@@ -1,5 +1,7 @@
 import "./style.css";
 import * as THREE from "three";
+import backgroundURL from "./black-background.jpg";
+import profileURL from "./profile-image.jpg";
 
 let camera, scene, renderer;
 
@@ -40,14 +42,12 @@ function init() {
   camera.position.x = 0;
   camera.position.y = 0;
 
-  const backgroundTexture = new THREE.TextureLoader().load(
-    "black-background.jpg"
-  );
+  const backgroundTexture = new THREE.TextureLoader().load(backgroundURL);
 
   scene = new THREE.Scene();
   scene.background = backgroundTexture;
 
-  const profileTexture = new THREE.TextureLoader().load("profile-image.jpg");
+  const profileTexture = new THREE.TextureLoader().load(profileURL);
 
   sphere = new THREE.Mesh(
     new THREE.BoxGeometry(100, 100, 100),

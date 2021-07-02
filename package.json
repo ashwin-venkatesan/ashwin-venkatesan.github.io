@@ -4,12 +4,14 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "start": "node server.js"
   },
   "devDependencies": {
     "vite": "^2.3.0"
   },
   "dependencies": {
+    "express": "^4.17.1",
     "three": "^0.128.0"
   }
 }
