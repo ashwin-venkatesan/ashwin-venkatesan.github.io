@@ -166,9 +166,17 @@ buttondiv {
 }
 
 @media screen and (max-width: 1279px) {
+  :root {
+    --spacing: 120px;
+  }
+
   header {
     grid-column: 2 / span 10;
-    font-size: 1.7rem;
+    font-size: 1rem;
+  }
+
+  blockquote p {
+    font-size: 2rem;
   }
 
   section {

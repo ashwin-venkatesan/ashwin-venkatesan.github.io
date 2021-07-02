@@ -15,9 +15,10 @@ let windowHalfY = window.innerHeight / 2;
 
 let scrolled = false;
 let headerelement = document.getElementById("header");
+headerelement.style.margin = 0;
 let rect = headerelement.getBoundingClientRect();
 let maxheader = rect.bottom - document.body.getBoundingClientRect().top;
-if (window.innerHeight - rect.bottom > 0) {
+if (window.innerWidth >= 1280) {
   headerelement.style.margin = `${
     (window.innerHeight - rect.bottom + 5) / 2
   }px 0px`;
@@ -101,15 +102,16 @@ function onWindowResize() {
   windowHalfY = window.innerHeight / 2;
 
   headerelement = document.getElementById("header");
+  headerelement.style.margin = "0px";
   rect = headerelement.getBoundingClientRect();
   maxheader = rect.bottom - document.body.getBoundingClientRect().top;
 
-  if (window.innerHeight - rect.bottom > 0) {
+  if (window.innerWidth >= 1280) {
     headerelement.style.margin = `${
       (window.innerHeight - rect.bottom + 5) / 2
     }px 0px`;
   } else {
-    headerelement.style.margin = `${window.innerHeight}px 0px 0px 0px`;
+    headerelement.style.margin = `${window.innerHeight}px 0px 120px 0px`;
   }
 
   camera.aspect = window.innerWidth / window.innerHeight;
