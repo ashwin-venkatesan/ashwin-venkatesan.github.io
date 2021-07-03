@@ -15,7 +15,7 @@ let windowHalfY = window.innerHeight / 2;
 
 let scrolled = false;
 let headerelement = document.getElementById("header");
-headerelement.style.margin = 0;
+headerelement.style.margin = "0px";
 let rect = headerelement.getBoundingClientRect();
 let maxheader = rect.bottom - document.body.getBoundingClientRect().top;
 if (window.innerWidth >= 1280) {
