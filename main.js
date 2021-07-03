@@ -20,7 +20,7 @@ let rect = headerelement.getBoundingClientRect();
 let maxheader = rect.bottom - document.body.getBoundingClientRect().top;
 if (window.innerWidth >= 1280) {
   headerelement.style.margin = `${
-    (window.innerHeight - rect.bottom + 5) / 2
+    (window.innerHeight - maxheader + 5) / 2
   }px 0px`;
 } else {
   headerelement.style.margin = `${window.innerHeight}px 0px 120px 0px`;
@@ -108,7 +108,7 @@ function onWindowResize() {
 
   if (window.innerWidth >= 1280) {
     headerelement.style.margin = `${
-      (window.innerHeight - rect.bottom + 5) / 2
+      (window.innerHeight - maxheader + 5) / 2
     }px 0px`;
   } else {
     headerelement.style.margin = `${window.innerHeight}px 0px 120px 0px`;
@@ -136,7 +136,6 @@ function onDocumentScroll(event) {
 function isScrolledIntoView(el) {
   let rect = el.getBoundingClientRect();
   let elemBottom = rect.bottom;
-  console.log(elemBottom);
   maxheader = Math.max(maxheader, elemBottom);
   let isVisible = false;
   if (elemBottom >= 0) {
